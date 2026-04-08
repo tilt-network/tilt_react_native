@@ -47,7 +47,6 @@ jobs:
 
             - name: Install JS dependencies (provides react-native AAR)
               run: yarn install --frozen-lockfile
-              working-directory: example
 
             - uses: gradle/actions/setup-gradle@v3
               with:
