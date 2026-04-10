@@ -19,7 +19,7 @@ class TiltModule(private val reactContext: ReactApplicationContext) :
         Tilt.initialize(reactContext)
 
         logJob?.cancel()
-        logJob = scope.launch {
+        logJob = scope.launch(start = CoroutineStart.UNDISPATCHED) {
             TiltLogBus.events.collect { event ->
                 val payload = Arguments.createMap().apply {
                     putString("level", event.level.toString())

@@ -16,7 +16,7 @@ import {
 import { start, stop, onLog, LogEvent } from '@tilt/react-native';
 
 export default function App() {
-  const [publicKey, setPublicKey] = useState('pk_3NqPrvpe6nDkdtyS1gJt4kX_4MQ');
+  const [publicKey, setPublicKey] = useState('');
   const [environment, setEnvironment] = useState('staging');
   const [running, setRunning] = useState(false);
   const [logs, setLogs] = useState<string[]>([]);
