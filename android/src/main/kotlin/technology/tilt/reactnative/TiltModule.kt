@@ -17,7 +17,6 @@ class TiltModule(private val reactContext: ReactApplicationContext) :
     @ReactMethod
     fun start(publicKey: String, environment: String) {
         Tilt.initialize(reactContext)
-        Tilt.start(reactContext, publicKey, environment)
 
         logJob?.cancel()
         logJob = scope.launch {
@@ -34,6 +33,8 @@ class TiltModule(private val reactContext: ReactApplicationContext) :
                 }
             }
         }
+
+        Tilt.start(reactContext, publicKey, environment)
     }
 
     @ReactMethod
