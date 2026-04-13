@@ -1,7 +1,7 @@
 import { NativeModules, NativeEventEmitter, Platform } from 'react-native';
 
 const LINKING_ERROR =
-  `The package '@tilt/react-native' doesn't seem to be linked. Make sure to ` +
+  `The package '@tilt_network/react-native' doesn't seem to be linked. Make sure to ` +
   `rebuild the app after installing the package.\n\n`;
 
 const TiltNative = NativeModules.TiltModule

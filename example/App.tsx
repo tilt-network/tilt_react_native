@@ -13,7 +13,7 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
-import { start, stop, onLog, LogEvent } from '@tilt/react-native';
+import { start, stop, onLog, LogEvent } from '@tilt_network/react-native';
 
 export default function App() {
   const [publicKey, setPublicKey] = useState('');

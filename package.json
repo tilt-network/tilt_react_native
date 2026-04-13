@@ -1,5 +1,5 @@
 {
-  "name": "@tilt/react-native",
+  "name": "@tilt_network/react-native",
   "version": "0.1.0",
   "description": "React Native bridge for the Tilt peer SDK",
   "main": "lib/index.js",
@@ -30,6 +30,10 @@
     "peer-sdk",
     "distributed-computing"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"

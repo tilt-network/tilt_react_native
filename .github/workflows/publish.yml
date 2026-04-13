@@ -24,6 +24,12 @@ jobs:
             - name: Install dependencies
               run: yarn install --frozen-lockfile
 
+            - name: Type check
+              run: yarn tsc --noEmit
+
+            - name: Run tests
+              run: yarn test
+
             - name: Build
               run: yarn build
 
@@ -32,7 +38,7 @@ jobs:
               run: |
                   CURRENT=$(node -p "require('./package.json').version")
                   echo "current=$CURRENT" >> "$GITHUB_OUTPUT"
-                  PUBLISHED=$(npm view @tilt/react-native version 2>/dev/null || echo "none")
+                  PUBLISHED=$(npm view @tilt_network/react-native version 2>/dev/null || echo "none")
                   echo "published=$PUBLISHED" >> "$GITHUB_OUTPUT"
                   if [ "$CURRENT" = "$PUBLISHED" ]; then
                       echo "skip=true" >> "$GITHUB_OUTPUT"
