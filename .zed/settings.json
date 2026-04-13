@@ -1,0 +1,23 @@
+{
+  "languages": {
+    "Kotlin": {
+      "language_servers": ["kotlin-lsp"]
+    },
+    "Groovy": {
+      "language_servers": ["groovy"]
+    }
+  },
+  "lsp": {
+    "kotlin-lsp": {
+      "binary": {
+        "path": "/Users/deco/Code/tilt/tilt_react_native/.zed/bin/kotlin-lsp.sh",
+        "arguments": ["--stdio"]
+      }
+    },
+    "groovy": {
+      "binary": {
+        "path": "/Users/deco/Code/tilt/tilt_react_native/.zed/bin/groovy-lsp.sh"
+      }
+    }
+  }
+}
