@@ -1,5 +1,5 @@
 {
-  "name": "@tilt_network/react-native",
+  "name": "@tilt-react-native/react-native",
   "version": "0.1.0",
   "description": "React Native bridge for the Tilt peer SDK",
   "main": "lib/index.js",
