@@ -1,7 +1,7 @@
 import { NativeModules, NativeEventEmitter, Platform } from 'react-native';
 
 const LINKING_ERROR =
-  `The package '@tilt/react-native' doesn't seem to be linked. Make sure to ` +
+  `The package '@tilt-react-native/react-native' doesn't seem to be linked. Make sure to ` +
   `rebuild the app after installing the package.\n\n`;
 
 const TiltNative = NativeModules.TiltModule
@@ -44,7 +44,7 @@ function getEmitter(): NativeEventEmitter {
  */
 export function start(publicKey: string, options: TiltOptions = {}): void {
   if (Platform.OS !== 'android') {
-    console.warn('@tilt/react-native: only Android is supported at this time.');
+    console.warn('@tilt-react-native/react-native: only Android is supported at this time.');
     return;
   }
   TiltNative.start(publicKey, options.environment ?? 'production');
